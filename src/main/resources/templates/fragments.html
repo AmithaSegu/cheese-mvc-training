@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">My Cheeses</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <a href="/cheese">List</a> |
+    <a href="/cheese/add">Add Cheese</a> |
+    <a href="/cheese/remove">Remove</a> |
+    <a href="/user/add">Add User</a>
+</nav>
+
+</body>
+</html>
