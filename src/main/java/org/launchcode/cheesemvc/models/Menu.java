@@ -29,7 +29,7 @@ public class Menu {
 
     public Menu(){ }
 
-    public void addItem(Cheese item){}
+    public void addItem(Cheese item){ }
 
     public int getId() {
         return id;

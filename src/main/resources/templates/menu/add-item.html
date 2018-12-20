@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <title th:text="${title}">Title</title>
 </head>
-<form method="post" th:object="${form}">
+<form method="post" th:object="${form}" action="/menu/add-item">
     <div class="form-group">
         <label th:for="id">Cheese</label>
         <select th:name="id">
@@ -13,7 +13,7 @@
                     th:value="${cheese.id}">
             </option>
         </select>
-        <span
+
     </div>
     <input type="hidden" name="menuId" th:value="*{menu.id}" />
     <input type="submit" value="Add Item"/>
