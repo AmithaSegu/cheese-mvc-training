@@ -57,6 +57,8 @@ public class MenuController {
         Menu menu = menuDao.findById(id).get();
         model.addAttribute("menu", menu);
         model.addAttribute("title", menu.getName());
+        model.addAttribute("cheeses",menu.getCheeses());
+        //model.addAttribute("id",menu.getId());
         return "menu/view";
     }
 
@@ -78,10 +80,6 @@ public class MenuController {
         Menu theMenu = menuDao.findById(form.getMenuId()).get();
         theMenu.addItem(theCheese);
         menuDao.save(theMenu);
-        return "redirect:/menu/view"+ theMenu.getId();
+        return "redirect:/menu/view/"+ theMenu.getId();
     }
-
-
-
-
 }

@@ -6,8 +6,8 @@
 </head>
 <form method="post" th:object="${form}" action="/menu/add-item">
     <div class="form-group">
-        <label th:for="id">Cheese</label>
-        <select th:name="id">
+        <label th:for="cheeseId">Cheese</label>
+        <select th:name="cheeseId">
             <option th:each="cheese:*{cheeses}"
                     th:text="${cheese.name}"
                     th:value="${cheese.id}">
